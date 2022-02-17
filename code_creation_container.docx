@@ -1,0 +1,11 @@
+
+
+docker network create poc
+
+docker run -d -p 27017:27017 --network poc -v /Users/jonathanduvillage/Documents/volume_docker:/data/db --name database \
+    -e MONGO_INITDB_ROOT_USERNAME=dbuser \
+    -e MONGO_INITDB_ROOT_PASSWORD=dbpassword \
+    -e MONGO_INITDB_DATABASE=userdb \
+    mongo
+
+
